@@ -1,16 +1,16 @@
-/// Danilo Guillermo Abell· de Oliveira
-/// LCC ¡lgebra 2
-/// Prof : MÛnica
+/// Danilo Guillermo Abell√° de Oliveira
+/// LCC √Ålgebra 2
+/// Prof : M√≥nica
 /// Ayudante : Luis Hernan Herrera
 /// S.O : Windows 8.1
-/// Compilador : Code::Blocks ( con librerÌas winbgim.h y graphics.h instaladas )
+/// Compilador : Code::Blocks ( con librer√≠as winbgim.h y graphics.h instaladas )
 
 
 
 
 
 #include<iostream>
-#include<winbgim.h>
+//#include<winbgim.h>
 #include<graphics.h>
 #include<cstdlib>
 #define MAX 30
@@ -687,7 +687,7 @@ short grado_2( int puntos , int p[MAX] ,  short graf )
 
         cout<<"\n\t[(A^t)*A]^(-1):\n"<<endl;
 
-    /// DefiniciÛn de variables y asignaciÛn din·mica de memoria
+    /// Definici√≥n de variables y asignaci√≥n din√°mica de memoria
 
         float sum , factor , *L[fil_t] , D[fil_t] , X[fil_t] ;
         float a[MAX][MAX] , ainv[MAX][MAX];
@@ -703,7 +703,7 @@ short grado_2( int puntos , int p[MAX] ,  short graf )
 
 ///--------------------------------------------------------------------------------------------------------------------------/
 
-	/// Algoritmo para la eliminaciÛn simple de Gauss
+	/// Algoritmo para la eliminaci√≥n simple de Gauss
 //-----------------------------------------------------------------------------------------------------------------------------------/
         for ( j=0 ; j<fil_t ; j++ )
         {
@@ -722,7 +722,7 @@ short grado_2( int puntos , int p[MAX] ,  short graf )
 
         }
 //-----------------------------------------------------------------------------------------------------------------------------------/
-/// Rutina para determinar las matrices L (inferior) y U (superior) de la descomposiciÛn LU.
+/// Rutina para determinar las matrices L (inferior) y U (superior) de la descomposici√≥n LU.
 
 
         for ( i = 0 ; i < fil_t ; i++ )
@@ -747,7 +747,7 @@ short grado_2( int puntos , int p[MAX] ,  short graf )
 
 ///------------------------------------------------------------------------------------------------------------------------------------------------///
 
-        for ( k = 0; k < fil_t ; k++ )         /// ImplementaciÛn de la rutina para el c·lculo de la inversa
+        for ( k = 0; k < fil_t ; k++ )         /// Implementaci√≥n de la rutina para el c√°lculo de la inversa
         {
             for ( i = 0; i < fil_t ; i++ )    /// Esta rutina inicializa los L[i][n] para ser utilizados con la matriz L
             {
@@ -757,7 +757,7 @@ short grado_2( int puntos , int p[MAX] ,  short graf )
 
 //-----------------------------------------------------------------------------------------------------------------------------------/
 
-                                        /// Esta funciÛn implementa la sustituciÛn hacia adelante con la matriz L y los L[i][n] que produce la rutina anterior
+                                        /// Esta funci√≥n implementa la sustituci√≥n hacia adelante con la matriz L y los L[i][n] que produce la rutina anterior
             D[0] = L[0][fil_t];
 
             for (i = 1; i < fil_t; i++)
@@ -777,11 +777,11 @@ short grado_2( int puntos , int p[MAX] ,  short graf )
                 a[i][fil_t] = D[i];
             }
 
-            X[fil_t-1] = a[fil_t-1][fil_t]/a[fil_t-1][fil_t-1];     /// Rutina que aplica la sustituciÛn hacia atras.
+            X[fil_t-1] = a[fil_t-1][fil_t]/a[fil_t-1][fil_t-1];     /// Rutina que aplica la sustituci√≥n hacia atras.
 
 //-----------------------------------------------------------------------------------------------------------------------------------/
 
-            for (i = fil_t - 2; i > -1; i--)     /// DeterminaciÛn de las raÌces restantes.
+            for (i = fil_t - 2; i > -1; i--)     /// Determinaci√≥n de las ra√≠ces restantes.
             {
                 sum = 0;
                 for (j = i+1; j < fil_t; j++)
@@ -1106,7 +1106,7 @@ short grado_3( int puntos , int p[MAX] ,  short graf )
 ///-------------------------------------------------------------------------------------------------/
 
     //-----------------------------------------------------------------------------------------------------------------------------------/
-/// C·lculo del determinante
+/// C√°lculo del determinante
 
     det = 1.;
 	for (i = 0 ; i <fil_t ; i++)
@@ -1122,7 +1122,7 @@ short grado_3( int puntos , int p[MAX] ,  short graf )
 
         cout<<"\n\t[(A^t)*A]^(-1):\n"<<endl;
 
-    /// DefiniciÛn de variables y asignaciÛn din·mica de memoria
+    /// Definici√≥n de variables y asignaci√≥n din√°mica de memoria
 
         float sum , factor , L[MAX][MAX] , D[fil_t] , X[fil_t] ;
         float a[MAX][MAX] , ainv[MAX][MAX];
@@ -1138,7 +1138,7 @@ short grado_3( int puntos , int p[MAX] ,  short graf )
 
 ///--------------------------------------------------------------------------------------------------------------------------/
 
-	/// Algoritmo para la eliminaciÛn simple de Gauss
+	/// Algoritmo para la eliminaci√≥n simple de Gauss
 //-----------------------------------------------------------------------------------------------------------------------------------/
 
         for (k =0 ; k<fil_t-1 ; k++)
@@ -1154,7 +1154,7 @@ short grado_3( int puntos , int p[MAX] ,  short graf )
 
         }
 //-----------------------------------------------------------------------------------------------------------------------------------/
-/// Rutina para determinar las matrices L (inferior) y U (superior) de la descomposiciÛn LU.
+/// Rutina para determinar las matrices L (inferior) y U (superior) de la descomposici√≥n LU.
 
 
         for ( i = 0 ; i < fil_t ; i++ )
@@ -1179,7 +1179,7 @@ short grado_3( int puntos , int p[MAX] ,  short graf )
 
 ///------------------------------------------------------------------------------------------------------------------------------------------------///
 
-        for ( k = 0; k < fil_t ; k++ )         /// ImplementaciÛn de la rutina para el c·lculo de la inversa
+        for ( k = 0; k < fil_t ; k++ )         /// Implementaci√≥n de la rutina para el c√°lculo de la inversa
         {
             for ( i = 0; i < fil_t ; i++ )    /// Esta rutina inicializa los L[i][n] para ser utilizados con la matriz L
             {
@@ -1189,7 +1189,7 @@ short grado_3( int puntos , int p[MAX] ,  short graf )
 
 //-----------------------------------------------------------------------------------------------------------------------------------/
 
-                                        /// Esta funciÛn implementa la sustituciÛn hacia adelante con la matriz L y los L[i][n] que produce la rutina anterior
+                                        /// Esta funci√≥n implementa la sustituci√≥n hacia adelante con la matriz L y los L[i][n] que produce la rutina anterior
             D[0] = L[0][fil_t];
 
             for (i = 1; i < fil_t; i++)
@@ -1209,11 +1209,11 @@ short grado_3( int puntos , int p[MAX] ,  short graf )
                 a[i][fil_t] = D[i];
             }
 
-            X[fil_t-1] = a[fil_t-1][fil_t]/a[fil_t-1][fil_t-1];     /// Rutina que aplica la sustituciÛn hacia atras.
+            X[fil_t-1] = a[fil_t-1][fil_t]/a[fil_t-1][fil_t-1];     /// Rutina que aplica la sustituci√≥n hacia atras.
 
 //-----------------------------------------------------------------------------------------------------------------------------------/
 
-            for (i = fil_t - 2; i > -1; i--)     /// DeterminaciÛn de las raÌces restantes.
+            for (i = fil_t - 2; i > -1; i--)     /// Determinaci√≥n de las ra√≠ces restantes.
             {
                 sum = 0;
                 for (j = i+1; j < fil_t; j++)
@@ -1587,7 +1587,7 @@ void systema()
 
         cout<<"\n\t[(A^t)*A]^(-1):\n"<<endl;
 
-    /// DefiniciÛn de variables y asignaciÛn din·mica de memoria
+    /// Definici√≥n de variables y asignaci√≥n din√°mica de memoria
 
         float sum , factor , *L[fil_t] , D[fil_t] , X[fil_t] ;
         float a[MAX][MAX] , ainv[MAX][MAX];
@@ -1603,7 +1603,7 @@ void systema()
 
 ///--------------------------------------------------------------------------------------------------------------------------/
 
-	/// Algoritmo para la eliminaciÛn simple de Gauss
+	/// Algoritmo para la eliminaci√≥n simple de Gauss
 //-----------------------------------------------------------------------------------------------------------------------------------/
         for ( j=0 ; j<fil_t ; j++ )
         {
@@ -1622,7 +1622,7 @@ void systema()
 
         }
 //-----------------------------------------------------------------------------------------------------------------------------------/
-/// Rutina para determinar las matrices L (inferior) y U (superior) de la descomposiciÛn LU.
+/// Rutina para determinar las matrices L (inferior) y U (superior) de la descomposici√≥n LU.
 
 
         for ( i = 0 ; i < fil_t ; i++ )
@@ -1647,7 +1647,7 @@ void systema()
 
 ///------------------------------------------------------------------------------------------------------------------------------------------------///
 
-        for ( k = 0; k < fil_t ; k++ )         /// ImplementaciÛn de la rutina para el c·lculo de la inversa
+        for ( k = 0; k < fil_t ; k++ )         /// Implementaci√≥n de la rutina para el c√°lculo de la inversa
         {
             for ( i = 0; i < fil_t ; i++ )    /// Esta rutina inicializa los L[i][n] para ser utilizados con la matriz L
             {
@@ -1657,7 +1657,7 @@ void systema()
 
 //-----------------------------------------------------------------------------------------------------------------------------------/
 
-                                        /// Esta funciÛn implementa la sustituciÛn hacia adelante con la matriz L y los L[i][n] que produce la rutina anterior
+                                        /// Esta funci√≥n implementa la sustituci√≥n hacia adelante con la matriz L y los L[i][n] que produce la rutina anterior
             D[0] = L[0][fil_t];
 
             for (i = 1; i < fil_t; i++)
@@ -1677,11 +1677,11 @@ void systema()
                 a[i][fil_t] = D[i];
             }
 
-            X[fil_t-1] = a[fil_t-1][fil_t]/a[fil_t-1][fil_t-1];     /// Rutina que aplica la sustituciÛn hacia atras.
+            X[fil_t-1] = a[fil_t-1][fil_t]/a[fil_t-1][fil_t-1];     /// Rutina que aplica la sustituci√≥n hacia atras.
 
 //-----------------------------------------------------------------------------------------------------------------------------------/
 
-            for (i = fil_t - 2; i > -1; i--)     /// DeterminaciÛn de las raÌces restantes.
+            for (i = fil_t - 2; i > -1; i--)     /// Determinaci√≥n de las ra√≠ces restantes.
             {
                 sum = 0;
                 for (j = i+1; j < fil_t; j++)
